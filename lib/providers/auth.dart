@@ -33,7 +33,7 @@ class Auth with ChangeNotifier {
       String email, String password, String urlSegment) async {
          
     final url =
-        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=$WebApiKey.WEBAPIKEY';
+        'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=${WebApiKey.WEBAPIKEY}';
     try {
       final response = await http.post(url,
           body: json.encode({
